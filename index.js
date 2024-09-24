@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 // define routes
-const userRoutes = require ('./route/userRoute');
-const productRoutes = require ('./route/productRoute');
+const userRoute = require ('./routes/userRoute');
+const productRoute = require ('./routes/productRoute');
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config({
@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const port = process.env.PORT;
-const dbconnection= "mongodb+srv://mainadominic628:Dominic77.@ecommerce.iljqts6.mongodb.net/?retryWrites=true&w=majority&appName=Ecommerce";
+const dbconnection= "mongodb+srv://mainadominic628:Dominic77.@clustereapp.50ogx.mongodb.net/?retryWrites=true&w=majority&appName=ClusterEapp";
 // const dbconnection= process.env.MONGOURL;
 
 const app = express();
@@ -39,5 +39,5 @@ mongoose.connect(dbconnection,{useNewUrlParser:true,useUnifiedTopology:true})
    .catch(err => console.error('Error connecting to MongoDB',err));
 
 //    create api routes
- app.use('/api/users',userRoutes);
- app.use('/api/products',productRoutes);
+ app.use('/api/users',userRoute);
+ app.use('/api/products',productRoute);

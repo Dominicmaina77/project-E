@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const users = require("../models/userModels")
-const bcrypt = require('bcrypt');
 const User = require('../models/userModels');
 
 const createUser = async(req,res) =>{
