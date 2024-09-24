@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const users = require("../models/userModels")
 const User = require('../models/userModels');
+const bcrypt = require('bcryptjs');
 
 const createUser = async(req,res) =>{
     try{
