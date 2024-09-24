@@ -3,9 +3,9 @@ const productSchema =  new mongoose.Schema({
     name:{
         type:String
     },
-    quantity:{
-        type:Number
-    },
+    // quantity:{
+    //     type:Number
+    // },
     price:{
          type:Number
     },
